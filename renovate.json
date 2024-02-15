@@ -3,22 +3,12 @@
   "extends": [
     "github>npastorale/workflows//renovate/default"
   ],
-  "kubernetes": {
-    "fileMatch": [
-      "apps/.+\\.yaml$"
-    ],
-    "packageRules": [
-      {
-        "matchPackagePrefixes": [
-          "lscr.io/linuxserver/"
-        ],
-        "versioning": "regex:^v?(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)[.-]?(?<build>\\w*)?-?(?<commit>\\w{0,9})?-ls(?<revision>\\d+)-?(?<compatibility>\\w?)$"
-      }
-    ]
-  },
-  "argocd": {
-    "fileMatch": [
-      "argocd/.+\\.yaml$"
-    ]
-  }
+  "packageRules": [
+    {
+      "matchPackagePrefixes": [
+        "lscr.io/linuxserver/"
+      ],
+      "versioning": "regex:^v?(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)[.-]?(?<build>\\w*)?-?(?<commit>\\w{0,9})?-ls(?<revision>\\d+)-?(?<compatibility>\\w?)$"
+    }
+  ]
 }
