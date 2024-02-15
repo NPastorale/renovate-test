@@ -1,7 +1,0 @@
-resources:
-  - Service.yaml
-  - StatefulSet.yaml
-configMapGenerator:
-  - name: bind-internal
-    files:
-      - named.conf

@@ -1,0 +1,1 @@
+FROM lscr.io/linuxserver/qbittorrent:1.1.1-r0-ls1
